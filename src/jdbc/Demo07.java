@@ -2,16 +2,13 @@ package jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
-
 /**
- * 查询
+ * 修改
  * @author Administrator
  *
  */
-public class Demo06 {
+public class Demo07 {
 	public static void main(String[] args) {
 		
 		try {
@@ -27,20 +24,11 @@ public class Demo06 {
 				Statement s = c.createStatement();
 		)
 		{
-				//查询的SQL
-				String sql = "select * from hero";
-				// 执行查询语句，并把结果集返回给ResultSet
-				ResultSet rs = s.executeQuery(sql);		
-				while(rs.next()){
-					int id = rs.getInt("id");
-					String name = rs.getString(2);
-					float hp = rs.getFloat("hp");
-					int damage = rs.getInt(4);
-					System.out.printf("%d\t%s\t%f\t%d%n",id,name,hp,damage);
-				}
-		         // 不一定要在这里关闭ReultSet，因为Statement关闭的时候，会自动关闭ResultSet
-	            // rs.close();		
-		} catch (SQLException e) {
+				//修改的SQL
+				String sql = "update hero set name = 'name 5' where id = 3";
+				s.execute(sql);			
+				System.out.println("修改一条数据");	
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
