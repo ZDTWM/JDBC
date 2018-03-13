@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * 查询
+ * 查询数据
  * @author Administrator
  *
  */
