@@ -3,7 +3,11 @@ package jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
-
+/**
+ * 使用try-with-resource的方式自动关闭连接
+ * @author Administrator
+ *
+ */
 public class Demo02 {
 	public static void main(String[] args) {
 		
