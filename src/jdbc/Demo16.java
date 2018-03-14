@@ -4,9 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 /**
- * 使用try-with-resource的方式自动关闭连接
- * @author Administrator
- *
+ *	事务：不使用事务
  */
 public class Demo16 {
 	public static void main(String[] args) {
